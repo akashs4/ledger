@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: ledger
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ledger
+    username: ledger
+    password: ledger
+    hikari:
+      maximum-pool-size: 30
+  jpa:
+    hibernate:
+      ddl-auto: validate    # Flyway owns the schema, not Hibernate
+  flyway:
+    enabled: true
